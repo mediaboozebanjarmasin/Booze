@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOZE Karaoke Lounge & Resto - Official System</title>
+    
+    <link rel="icon" type="image/png" href="Boozehitam.png">
+    <link rel="apple-touch-icon" href="Boozehitam.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body { background-color: #0c0c0c; color: #ffffff; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+        
+        /* Navbar & Logo */
+        .navbar { background-color: rgba(0,0,0,0.9); border-bottom: 2px solid #e91e63; padding: 15px 0; }
+        .navbar-brand img { height: 45px; width: auto; }
+
+        /* Hero Section */
+        .hero-section { 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1514525253361-bee871870472?auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover; background-position: center; padding: 100px 0; text-align: center; 
+        }
+
+        /* Card & UI Elements */
+        .card { background-color: #161616; border: 1px solid #333; color: white; border-radius: 15px; margin-bottom: 25px; transition: 0.3s; }
+        .card:hover { border-color: #e91e63; }
+        .text-pink { color: #e91e63; font-weight: bold; }
+        .btn-primary { background-color: #e91e63; border: none; font-weight: bold; padding: 12px; }
+        .btn-primary:hover { background-color: #ad1457; transform: scale(1.02); }
+        .form-control, .form-select { background-color: #222; border: 1px solid #444; color: white; }
+        .form-control:focus, .form-select:focus { background-color: #2d2d2d; color: white; border-color: #e91e63; box-shadow: none; }
+        
+        /* Gallery */
+        .gallery-img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; border: 2px solid #333; transition: 0.3s; }
+        .gallery-img:hover { transform: scale(1.05); border-color: #e91e63; }
+
+        /* Maps & Dashboard */
+        .map-container { border-radius: 15px; overflow: hidden; border: 1px solid #333; height: 300px; }
+        .admin-panel { display: none; background: #111; padding: 20px; border-radius: 15px; border: 1px dashed #555; margin-top: 40px; }
+        .estimasi-box { background: #222; border-left: 4px solid #0dcaf0; padding: 15px; border-radius: 5px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar sticky-top">
+    <div class="container text-center">
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="Boozehitam.png" alt="" onerror="this.style.display='none'">
+            <span class="fw-bold text-white ms-2">B O O Z E</span>
+            </a>
+    </div>
+</nav>
+
+<div class="hero-section">
+    <div class="container">
+        <h1 class="display-4 fw-bold">EXPERIENCE THE NIGHT</h1>
+        <p class="lead">Luxury Karaoke, Lounge & Resto</p>
+        <a href="#reservasi" class="btn btn-primary px-5 shadow">BOOK NOW</a>
+    </div>
+</div>
+
+<div class="container my-5">
+    
+    <h3 class="text-info mb-4 text-center">Our Ambience</h3>
+    <div class="row g-3 mb-5">
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?w=500" class="gallery-img"></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1525268323446-0505b6fe5bb8?w=500" class="gallery-img"></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=500" class="gallery-img"></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500" class="gallery-img"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card p-4 h-100">
+                <h4 class="text-pink mb-3">Pricelist</h4>
+                <table class="table table-dark table-hover small">
+                    <thead><tr><th>Layanan</th><th>Mulai Dari</th></tr></thead>
+                    <tbody>
+                        <tr><td>Karaoke Perjam</td><td>Rp 150.000 / Jam</td></tr>
+                        <tr><td>Karaoke Keluarga, Pelajar, Mahasiswa</td><td>Rp 250.000 / Jam</td></tr>
+                        <tr><td>Karaoke Paket, Mulai Dari</td><td>Rp 500.000 / Paket</td></tr>
+                        <tr><td>Lounge Table & Sofa</td><td>Rp 100.000 Sampai dengan Rp 500.000 (Min. Charge Weekday / Weekend)</td></tr>
+                        <tr><td>Lounge VIP Sofa</td><td>Rp 1.500.000 (Package)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-4 h-100">
+                <h4 class="text-pink mb-3">Weekly Events</h4>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><strong>Senin:</strong> Live Musik Band & Dj Mc Performance</li>
+                    <li class="mb-2"><strong>Selasa:</strong> Live Musik Full Dj Mc Performance</li>
+                    <li class="mb-2"><strong>Rabu:</strong> Live Musik Band & Dj Mc Performance</li>
+                    <li class="mb-2"><strong>Jumat:</strong>Live Musik Band & Dj Mc Performance</li>
+                    <li class="mb-2"><strong>Sabtu:</strong>Live Musik Band & Dj Mc Performance</li>
+                    <li class="mb-2"><strong>Minggu:</strong> Live Musik Full Dj Mc Performance</li>
+                    <li class="mb-2 text-info"><strong>30 Mar:</strong> Anniversary Party (Big Event)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5" id="reservasi">
+        <div class="col-lg-7">
+            <div class="card p-4 shadow-lg">
+                <h4 class="text-info mb-4">Reservation Form</h4>
+                <form id="reservationForm">
+                    <div class="mb-3">
+                        <label class="form-label">Nama Anda</label>
+                        <input type="text" id="name" class="form-control" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Layanan</label>
+                            <select id="service" class="form-select" onchange="updateOptions()" required>
+                                <option value="Lounge">Lounge / Table</option>
+                                <option  value="Karaoke">Karaoke / Room</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Unit</label>
+                            <select id="roomNumber" class="form-select" onchange="calculatePrice()" required></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3"><label class="form-label">Tanggal</label><input type="date" id="date" class="form-control" required></div>
+                        <div class="col-md-6 mb-3"><label class="form-label">Jam</label><input type="time" id="time" class="form-control" required></div>
+                    </div>
+
+                    <div class="estimasi-box">
+                        <h6 class="text-info m-0">Estimasi Biaya Dasar:</h6>
+                        <h3 class="m-0" id="displayTotal">Rp 200.000</h3>
+                    </div>
+
+<div class="mb-4">
+<label class="form-label text-warning fw-bold">Pilih Admin Tujuan:</label>
+<div class="d-flex gap-2">
+<input type="radio" class="btn-check" name="adminWA" id="adm1"
+value="6282357416116">
+<label class="btn btn-outline-info flex-fill" for="adm1">Admin ita</label>
+<input type="radio" class="btn-check" name="adminWA" id="adm2"
+value="6283841856910">
+<label class="btn btn-outline-info flex-fill" for="adm2">Admin nanda</label>
+<input type="radio" class="btn-check" name="adminWA" id="adm3"
+value="6282250765476">
+<label class="btn btn-outline-info flex-fill" for="adm3">Admin putra</label>
+</div>
+</div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-3">SEND RESERVATION</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card p-4 mb-4">
+                <h4 class="text-info mb-3">Our Location</h4>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.1202286985226!2d11
+4.59730467497187!3d-3.3204533966543575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m
+2!1s0x2de423b755d42f57%3A0x600d44a8f95f74bb!2sBooze%20Banjarmasin!5e0!3m2!1sen!2
+sid!4v1771842991655!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p class="mt-3 small text-muted">📍 Jl. Veteran Ruko No. 64 ( sebrang Gg SMPN 6 ), Banjarmasin, Kalimantan-Selatan</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-sm btn-outline-secondary" onclick="toggleAdmin()">Internal Dashboard</button>
+    <div id="adminPanel" class="admin-panel">
+        <h4 class="text-info">Reservation Logs</h4>
+        <div class="table-responsive">
+            <table class="table table-dark table-striped">
+                <thead><tr><th>Nama</th><th>Unit</th><th>Jadwal</th><th>Total</th></tr></thead>
+                <tbody id="reportTable"></tbody>
+            </table>
+        </div>
+        <button class="btn btn-sm btn-danger" onclick="clearData()">Clear All Logs</button>
+    </div>
+
+</div>
+
+<footer class="text-center py-4 border-top border-secondary text-muted">
+    <p>&copy; 2026 Booze & Management System</p>
+</footer>
+
+<script>
+    // 1. Inisialisasi
+    document.getElementById('date').setAttribute('min', new Date().toISOString().split('T')[0]);
+
+    function updateOptions() {
+        const service = document.getElementById('service').value;
+        const roomSelect = document.getElementById('roomNumber');
+        roomSelect.innerHTML = "";
+        if (service === "Lounge") {
+            const options = [{n: "Meja Reguler", p: 200000}, {n: "Sofa VIP", p: 1500000}];
+            options.forEach(o => { let opt = new Option(o.n, o.n); opt.dataset.price = o.p; roomSelect.add(opt); });
+        } else {
+            const options = [{n: "Small Room", p: 100000}, {n: "Large Room", p: 250000}];
+            options.forEach(o => { let opt = new Option(o.n, o.n); opt.dataset.price = o.p; roomSelect.add(opt); });
+        }
+        calculatePrice();
+    }
+
+    function calculatePrice() {
+        const roomSelect = document.getElementById('roomNumber');
+        const selectedOption = roomSelect.options[roomSelect.selectedIndex];
+        const price = selectedOption ? selectedOption.dataset.price : 0;
+        document.getElementById('displayTotal').innerText = "Rp " + parseInt(price).toLocaleString('id-ID');
+    }
+
+    // 2. Kirim Pesan & Simpan Log
+    document.getElementById('reservationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = {
+            name: document.getElementById('name').value,
+            unit: document.getElementById('roomNumber').value,
+            time: `${document.getElementById('date').value} ${document.getElementById('time').value}`,
+            total: document.getElementById('displayTotal').innerText,
+            wa: document.querySelector('input[name="adminWA"]:checked').value
+        };
+
+        let logs = JSON.parse(localStorage.getItem('starry_final_logs')) || [];
+        logs.push(data);
+        localStorage.setItem('starry_final_logs', JSON.stringify(logs));
+
+        const pesan = `*RESERVASI BARU*%0A*Nama:* ${data.name}%0A*Unit:* ${data.unit}%0A*Jadwal:* ${data.time}%0A*Total:* ${data.total}`;
+        window.open(`https://wa.me/${data.wa}?text=${pesan}`, '_blank');
+        loadReport();
+    });
+
+    // 3. Admin Panel Logic
+    function toggleAdmin() {
+        const p = document.getElementById('adminPanel');
+        p.style.display = p.style.display === 'block' ? 'none' : 'block';
+        loadReport();
+    }
+
+    function loadReport() {
+        const logs = JSON.parse(localStorage.getItem('starry_final_logs')) || [];
+        document.getElementById('reportTable').innerHTML = logs.map(l => `<tr><td>${l.name}</td><td>${l.unit}</td><td>${l.time}</td><td>${l.total}</td></tr>`).reverse().join('');
+    }
+
+    function clearData() { if(confirm("Hapus log?")) { localStorage.removeItem('starry_final_logs'); loadReport(); } }
+
+    updateOptions();
+</script>
+
+</body>
+</html>
